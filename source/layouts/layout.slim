@@ -8,13 +8,24 @@ html
     // <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     = stylesheet_link_tag "all"
   body
+    / .hero
+    /   img src="http://organicclimber.com/wp-content/uploads/2012/06/EmeraldLake.jpg" alt=""
+    /   .hero--copy
+    /     img src="http://www.leanpanda.com/images/layout/leanpanda-ideas-process.svg"
+    /     h1
+    /       | Titolo
+    /     p
+    /       | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+    /   .hero--overlay
+    = partial "partials/header"
     .hero
       .hero__inner
         a.hero-logo href=""
           img src="" alt=""
         .hero__copy
+          img src="http://www.leanpanda.com/images/layout/leanpanda-ideas-process.svg"
           h1
-            | Title
+            | Titolo
           p
             |  A few reasons why this product is worth using, who is it for and why do they need it.
         button
@@ -24,6 +35,67 @@ html
       == yield
 
       aside
+        h2
+          | Mamma Articles
+        ol
+          - blog.articles[0...10].each do |article|
+            li
+              = link_to article.title, article
+              span<>
+                = article.date.strftime('%b %e')
+        h2
+          | Tags
+        ol
+          - blog.tags.each do |tag, articles|
+            li
+              = link_to "#{tag} (#{articles.size})", tag_path(tag)
+        h2
+          | By Year
+        ol
+          - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+            li
+              = link_to "#{year} (#{articles.size})", blog_year_path(year)
+        h2
+          | Mamma Articles
+        ol
+          - blog.articles[0...10].each do |article|
+            li
+              = link_to article.title, article
+              span<>
+                = article.date.strftime('%b %e')
+        h2
+          | Tags
+        ol
+          - blog.tags.each do |tag, articles|
+            li
+              = link_to "#{tag} (#{articles.size})", tag_path(tag)
+        h2
+          | By Year
+        ol
+          - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+            li
+              = link_to "#{year} (#{articles.size})", blog_year_path(year)
+      aside
+        h2
+          | Mamma Articles
+        ol
+          - blog.articles[0...10].each do |article|
+            li
+              = link_to article.title, article
+              span<>
+                = article.date.strftime('%b %e')
+        h2
+          | Tags
+        ol
+          - blog.tags.each do |tag, articles|
+            li
+              = link_to "#{tag} (#{articles.size})", tag_path(tag)
+        h2
+          | By Year
+        ol
+          - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+            li
+              = link_to "#{year} (#{articles.size})", blog_year_path(year)
         h2
           | Mamma Articles
         ol
