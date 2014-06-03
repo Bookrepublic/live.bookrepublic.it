@@ -82,9 +82,7 @@ Slim::Engine.set_default_options :shortcut => {
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
+activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -98,6 +96,14 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  Dir.glob(File.join("#{root}", @bower_config["directory"], "*", "fonts")) do |f|
+    sprockets.append_path f
+  end
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
 
 # Build-specific configuration
 configure :build do

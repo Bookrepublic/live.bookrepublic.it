@@ -1,0 +1,23 @@
+{
+  "name": "live.bookrepublic.it",
+  "version": "0.1.0",
+  "homepage": "https://github.com/bookempire/live.bookrepublic.it",
+  "authors": [
+    "matteos@bookrepublic.it"
+  ],
+  "description": "Il nuovo sito di Bookrepublic",
+  "keywords": [
+    "bookrepublic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
