@@ -1,7 +1,7 @@
 .usa_playoff {
 
   @include outer-container;
-  @include margin(0 0.5em 2em 0.5em);
+  @include margin(0 0.5em 5em 0.5em);
 
   $mobile: new-breakpoint(max-width 640px 4);
 

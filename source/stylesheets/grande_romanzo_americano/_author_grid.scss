@@ -10,19 +10,19 @@ $mobile: new-breakpoint(max-width 640px 4);
     display: none;
   }
 
-  @include padding(6em 0em 2em 0em);
+  @include padding(9em 0em 5em 0em);
 
   $grid-items-background: $base-body-color;
   $grid-item-background: desaturate($base-accent-color, 30);
   $grid-item-colors:
     desaturate($base-accent-color, 30),
-    #3581A5,
+    $red,
     #5FBEBE,
     #98C79A,
-    #A7A891,
-    #BDCC97,
+    $blue,
+    $light-gray,
     #979EA0;
-  $grid-item-border-size: 9px;
+  $grid-item-border-size: 1em;
   $grid-item-columns: 3;
   $grid-item-big-columns: 6;
   $grid-item-color: white;
@@ -53,7 +53,7 @@ $mobile: new-breakpoint(max-width 640px 4);
       &:nth-child(#{$i}) {
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
-        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
+        // box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10);
         &:hover {
           background-color: darken($background-from-list, 10);
           background-repeat: no-repeat;
