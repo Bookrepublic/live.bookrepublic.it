@@ -1,22 +1,11 @@
 .headroom {
-  -webkit-transition: all 200ms ease-in-out;
--moz-transition: all 200ms ease-in-out;
--o-transition: all 200ms ease-in-out;
-transition: all 200ms ease-in-out;
+  @include transition (all 200ms ease-in-out);
 }
 .headroom--pinned {
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  transform: translateY(0%);
+  @include transform(translateY(0%));
 }
 .headroom--unpinned {
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
+  @include transform(translateY(-100%));
 }
 
 header.navigation {

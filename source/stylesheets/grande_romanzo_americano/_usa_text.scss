@@ -1,0 +1,14 @@
+.usa_text {
+  @include padding(2em 0.5em 2em 0.5em);
+  text-align: center;
+
+  h2 {
+    font-family: $serif;
+    color: $asphalt;
+  }
+
+  p {
+    font-family: $sans-serif;
+    color: $light-asphalt;
+  }
+}

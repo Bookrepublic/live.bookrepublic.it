@@ -1,0 +1,26 @@
+.image-gradient {
+  background-color: $green;
+  background-size: cover;
+  padding: 12em 0 12em 0;
+  position: relative;
+  width: 100%;
+  display: table;
+  margin-bottom: $base-line-height;
+
+  .copy {
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    z-index: 999;
+    top: 40%;
+    text-align: center;
+
+    p {
+      padding: 1em 2em;
+      position: relative;
+      left: -50%;
+      color: white;
+      font-weight: 800;
+    }
+  }
+}
