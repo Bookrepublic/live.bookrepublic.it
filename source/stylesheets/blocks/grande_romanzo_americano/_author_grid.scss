@@ -4,7 +4,7 @@
 
 $mobile: new-breakpoint(max-width 640px 4);
 
-.grid-items {
+.author-grid {
 
   @include media($mobile) {
     display: none;
@@ -30,7 +30,7 @@ $mobile: new-breakpoint(max-width 640px 4);
 
   @include clearfix;
 
-  .grid-item {
+  .author-grid__single {
     @include transition (all 0.2s ease-in-out);
     height: $grid-item-height;
     background: $grid-item-background;
@@ -64,20 +64,20 @@ $mobile: new-breakpoint(max-width 640px 4);
     }
   }
 
-  .grid-item img {
+  .author-grid__single img {
       display: block;
       height: 3em;
       margin: auto;
       margin-bottom: 1em;
     }
 
-  .grid-item h1 {
+  .author-grid__single h1 {
       color: $grid-item-color;
       font-size: 1.3em;
       margin-bottom: .4em;
     }
 
-  .grid-item p {
+  .author-grid__single p {
       margin: auto;
       color: transparentize($grid-item-color, .3);
       @include media($medium-screen) {
@@ -85,7 +85,7 @@ $mobile: new-breakpoint(max-width 640px 4);
       }
     }
 
-  .grid-item-big {
+  .author-grid__single--big {
     @include media($medium-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }
@@ -96,7 +96,7 @@ $mobile: new-breakpoint(max-width 640px 4);
     }
   }
 
-  .grid-item-image {
+  .author-grid__single--image {
     background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
     background-color: $grid-item-background;
     background-repeat: no-repeat;

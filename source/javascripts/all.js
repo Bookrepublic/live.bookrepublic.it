@@ -3,6 +3,21 @@
 //= require headroom.js/dist/headroom
 //= require headroom.js/dist/jQuery.headroom
 //= require typed.js/js/typed
+//= require masonry/dist/masonry.pkgd
+//= require imagesloaded/imagesloaded.pkgd
+//= require tooltipster/js/jquery.tooltipster
+
+//Masonry
+var container = document.querySelector('.usa_kit');
+var msnry = new Masonry( container, {
+  // options
+  columnWidth: container.querySelector('.usa_kit__sizer'),
+  itemSelector: '.usa_kit__book'
+});
+msnry.bindResize()
+imagesLoaded( container, function() {
+  msnry.layout();
+});
 
 //Header
 $("header").headroom({

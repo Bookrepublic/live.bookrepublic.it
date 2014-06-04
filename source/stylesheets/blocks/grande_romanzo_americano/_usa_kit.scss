@@ -1,0 +1,73 @@
+.usa_kit {
+  background: $light-blue;
+  @include padding(2em 2em 2em 2em);
+
+  img {
+      height: auto;
+      margin: auto;
+      width: 100%;
+      display: block;
+  }
+
+  .ribbon-wrapper {
+    $ribbon-size: 85px;
+    $ribbon-background: $base-accent-color;
+    @include size($ribbon-size);
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+
+    .ribbon {
+      font-size: .8em;
+      font-weight: 800;
+      text-align: center;
+      @include transform(rotate(45deg));
+      position: relative;
+      padding: 2px 7px;
+      left: -5px;
+      top: 15px;
+      width: 120px;
+      background-color: $ribbon-background;
+      color: white;
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    }
+  }
+
+  $mobile: new-breakpoint(max-width 640px 4);
+
+  .usa_kit__sizer {
+    width: 25%;
+
+    @include media($mobile) {
+      width: 50%;
+    }
+  }
+}
+
+.usa_kit__book {
+  @include margin(1em 1em 1em 1em);
+  box-shadow: 0 0.2em 0.2em darken($blue, 10);
+  width: 20%;
+  cursor: pointer;
+
+  @include media($mobile) {
+    @include margin(0.5em 0.5em 0.5em 0.5em);
+    width: 33%;
+  }
+}
+
+.usa_kit__book.small {
+  @extend .usa_kit__book;
+  width: 9%;
+}
+
+.usa_kit__book.medium {
+  @extend .usa_kit__book;
+  width: 12%;
+}
+
+.usa_kit__book.big {
+  @extend .usa_kit__book;
+  width: 18%;
+}
