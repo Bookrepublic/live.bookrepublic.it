@@ -1,6 +1,7 @@
 .usa_kit {
   background: $light-blue;
   @include padding(2em 2em 2em 2em);
+  margin-top: 5em;
 
   img {
       height: auto;
@@ -9,65 +10,105 @@
       display: block;
   }
 
-  .ribbon-wrapper {
-    $ribbon-size: 85px;
-    $ribbon-background: $base-accent-color;
-    @include size($ribbon-size);
+  .usa_kit__ribbon {
+    display: block;
+    border: 3px solid $yellow;
+    border-radius: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 5em;
+    height: 5em;
+    background: $yellow;
+    color: #fff;
+    line-height: 1em;
+    font-weight: 700;
+    @include padding(1.4em 0 0 0);
+    text-align: center;
+    margin: -1.4em 1em 0 0;
+    text-transform: uppercase;
     overflow: hidden;
     position: absolute;
-    top: -1px;
-    right: -1px;
+    right: -2em;
+    z-index: 100;
+    cursor: pointer;
+    @include transition (all 0.5s ease-in-out);
+    font-size: 0.6em;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
 
-    .ribbon {
-      font-size: .8em;
-      font-weight: 800;
-      text-align: center;
-      @include transform(rotate(45deg));
-      position: relative;
-      padding: 2px 7px;
-      left: -5px;
-      top: 15px;
-      width: 120px;
-      background-color: $ribbon-background;
-      color: white;
-      box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    &:hover {
+      background-color: $light-yellow;
     }
   }
 
-  $mobile: new-breakpoint(max-width 640px 4);
+  .usa_kit__list {
+
+  }
+
+  $iphone: new-breakpoint(max-width 480px);
+  $ipad: new-breakpoint(max-width 768px);
 
   .usa_kit__sizer {
-    width: 25%;
+    width: 20%;
 
-    @include media($mobile) {
+    @include media($ipad) {
+      width: 25%;
+    }
+
+    @include media($iphone) {
       width: 50%;
+    }
+  }
+
+  .usa_kit__item {
+    width: 20%;
+    background: $light-blue transparent;
+
+    @include media($ipad) {
+      width: 25%;
+    }
+
+    @include media($iphone) {
+      width: 50%;
+    }
+  }
+
+  .usa_kit__item--small {
+    width: 10%;
+    background: $light-blue transparent;
+
+    @include media($ipad) {
+      width: 12.5%;
+    }
+
+    @include media($iphone) {
+      width: 25%;
+    }
+  }
+
+  .usa_kit__item--big {
+    width: 40%;
+    background: $light-blue transparent;
+
+    @include media($ipad) {
+      width: 50%;
+    }
+
+    @include media($iphone) {
+      width: 100%;
     }
   }
 }
 
 .usa_kit__book {
-  @include margin(1em 1em 1em 1em);
-  box-shadow: 0 0.2em 0.2em darken($blue, 10);
-  width: 20%;
-  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:1em;
 
-  @include media($mobile) {
-    @include margin(0.5em 0.5em 0.5em 0.5em);
-    width: 33%;
+  img {
+    position: relative;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
   }
-}
-
-.usa_kit__book.small {
-  @extend .usa_kit__book;
-  width: 9%;
-}
-
-.usa_kit__book.medium {
-  @extend .usa_kit__book;
-  width: 12%;
-}
-
-.usa_kit__book.big {
-  @extend .usa_kit__book;
-  width: 18%;
 }

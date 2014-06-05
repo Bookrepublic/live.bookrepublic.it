@@ -1,9 +1,10 @@
+$ipad: new-breakpoint(max-width 768px 4);
+$iphone: new-breakpoint(max-width 480px 4);
+
 .usa_playoff {
 
   @include outer-container;
   @include margin(0 0.5em 5em 0.5em);
-
-  $mobile: new-breakpoint(max-width 640px 4);
 
   @include media($medium-screen) {
     li.usa_playoff__li {
@@ -12,10 +13,12 @@
     }
   }
 
-  @include media($mobile) {
+  @include media($ipad) {
     li.usa_playoff__li {
       @include span-columns(2);
       @include omega(2n);
+
+      margin-bottom: 1em;
     }
   }
 
@@ -50,45 +53,6 @@
       }
     }
 
-    .usa_playoff__cards--circle__versus {
-      width: 50%;
-      $versus-size: 5em;
-      @include size($versus-size);
-      position: absolute;
-      top: 0.5em;
-      right: -3.3em;
-      z-index: 1000;
-      @include media($mobile) {
-        top: 1em;
-        right: -3.8em;
-      }
-    }
-
-    .usa_playoff__cards--circle__versus:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height:0;
-      padding-bottom: 100%;
-      background: #4679BD;
-      -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-    }
-
-    .usa_playoff__cards--circle__versus div {
-      float:left;
-      width:100%;
-      padding-top:50%;
-      line-height:1em;
-      margin-top:-0.5em;
-      text-align:center;
-      color: white;
-      font-size: .8em;
-      font-weight: 800;
-  }
-  
     .usa_playoff__cards--card-header {
       @include transition (all 0.2s ease-in-out);
       background-color: $card-header-background;
@@ -116,4 +80,47 @@
       }
     }
   }
+}
+
+.usa_playoff__cards--circle__versus {
+  width: 50%;
+  $versus-size: 5em;
+  @include size($versus-size);
+  position: relative;
+  top: 6em;
+  left: 21%;
+  z-index: 100;
+  @include media($ipad) {
+    top: 6em;
+    left: 44.4%;
+  }
+  @include media($iphone) {
+    top: 6em;
+    left: 41.4%;
+  }
+}
+
+.usa_playoff__cards--circle__versus:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height:0;
+  padding-bottom: 100%;
+  background: #4679BD;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.usa_playoff__cards--circle__versus div {
+  float:left;
+  width:100%;
+  padding-top:50%;
+  line-height:1em;
+  margin-top:-0.5em;
+  text-align:center;
+  color: white;
+  font-size: .8em;
+  font-weight: 800;
 }

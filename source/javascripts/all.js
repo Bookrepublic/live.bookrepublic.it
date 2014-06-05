@@ -8,11 +8,11 @@
 //= require tooltipster/js/jquery.tooltipster
 
 //Masonry
-var container = document.querySelector('.usa_kit');
+var container = document.querySelector('.usa_kit__list');
 var msnry = new Masonry( container, {
   // options
   columnWidth: container.querySelector('.usa_kit__sizer'),
-  itemSelector: '.usa_kit__book'
+  itemSelector: '.usa_kit__item'
 });
 msnry.bindResize()
 imagesLoaded( container, function() {
@@ -56,6 +56,14 @@ $(document).ready(function() {
     });
     $(this).addClass("active-nav-item");
     $(".nav .more").removeClass("active-nav-item");
+  });
+});
+
+//tooltipster
+$(document).ready(function() {
+  $('.tooltip').tooltipster({
+    trigger: 'click',
+    delay: 50
   });
 });
 
