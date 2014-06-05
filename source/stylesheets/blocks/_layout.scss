@@ -2,5 +2,11 @@
     @include outer-container;
     margin-left: auto;
     margin-right: auto;
-    $mobile: new-breakpoint(max-width 500px 4);
+}
+
+.layout--small {
+    @extend .layout;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
