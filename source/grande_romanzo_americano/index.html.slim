@@ -8,9 +8,9 @@ layout: "base"
   /img src="https://raw.github.com/Magnus-G/Random/master/lake-transparent.png" alt=""
   .usa_hero__copy
     h1
-      | Prova
+      | Il grande romanzo Americano
     p
-      | Dynamic height container
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
   .usa_hero__overlay
 
 .layout--small
@@ -19,6 +19,11 @@ layout: "base"
       | Titolo 2
     p
       | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    h3
+      | Titolo 3
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+
 
   = partial "grande_romanzo_americano/partials/blog"
 
@@ -27,46 +32,22 @@ layout: "base"
     h2 Week 2
     p Week 2
 
-.layout
-  .usa_playoff__cards--circle__versus
-    div VS.
-  .usa_playoff
-    li.usa_playoff__li
-      .usa_playoff__cards
-        .usa_playoff__cards--card
-          .usa_playoff__cards--card-image
-            img alt="" src="https://raw.github.com/Magnus-G/Random/master/mountains.png"
-          .usa_playoff__cards--card-header
-            | First Card
-          .card-copy
-    li.usa_playoff__li
-      .usa_playoff__cards
-        .usa_playoff__cards--card
-          .usa_playoff__cards--card-image
-            img alt="" src="https://raw.github.com/Magnus-G/Random/master/mountains.png"
-          .usa_playoff__cards--card-header
-            | First Card
-          .card-copy
-    li.usa_playoff__li
-      .usa_playoff__cards
-        .usa_playoff__cards--card
-          .usa_playoff__cards--card-image
-            img alt="" src="https://raw.github.com/Magnus-G/Random/master/mountains.png"
-          .usa_playoff__cards--card-header
-            | First Card
-          .card-copy
-    li.usa_playoff__li
-      .usa_playoff__cards
-        .usa_playoff__cards--card
-          .usa_playoff__cards--card-image
-            img alt="" src="https://raw.github.com/Magnus-G/Random/master/mountains.png"
-          .usa_playoff__cards--card-header
-            | First Card
-          .card-copy
-  .usa_playoff__cards--circle__versus--right
-    div VS.
+  // puoi anche non includerlo
+  = partial "grande_romanzo_americano/partials/usa_playoff"
+
+.usa_first_week
+  .usa_first_week__copy
+    h2 Week 2
+    p Week 2
+
+  = partial "grande_romanzo_americano/partials/usa_playoff"
 
 .usa_kit
+  .usa_kit__copy
+    h2
+      | Prova
+    p
+      | lorem ipsum
   .usa_kit__list
     .usa_kit__sizer
     .usa_kit__item

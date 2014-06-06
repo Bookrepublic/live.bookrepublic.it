@@ -1,35 +1,41 @@
 .usa_hero {
-  $image-gradient-color-top: orange;
-  $transparency-top: .6;
-  $image-gradient-color-bottom: teal;
-  $transparency-bottom: .6;
+  $image-gradient-color-top: rgba(0, 0, 0, 0.0);
+  $transparency-top: .0;
+  $image-gradient-color-bottom: rgba(0, 0, 0, 1);
+  $transparency-bottom: .8;
   $vertical-angle: 180deg;
 
-  $image-gradient-color-left: teal;
+  $image-gradient-color-left: rgba(26, 188, 156,0.0);
   $transparency-left: .8;
-  $image-gradient-color-right: yellow;
-  $transparency-right: .8;
-  $horizontal-angle: 90deg;
+  $image-gradient-color-right: rgba(0, 0, 0, 0.6);
+  $transparency-right: 1.0;
+  $horizontal-angle: 180deg;
 
   position: relative;
   line-height: 0;
   width: 100%;
 
-  background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+  background: url(/images/writers.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  padding-top: 40em;
+  padding-top: 60em;
   padding-bottom: 4em;
 
   .usa_hero__copy {
     position: absolute;
-    top: 50%;
+    bottom: -10%;
     left: 50%;
     margin: auto;
     z-index: 100;
     text-align: center;
     @include transform(translate(-50%, -50%));
+
+    h1 {
+      family: $sans-serif;
+      @include margin(0em 0em 2em 0em);
+      color: white;
+    }
 
     p {
       line-height: 1.5em;
@@ -37,22 +43,22 @@
       position: relative;
       color: white;
       font-weight: 800;
-      background-color: transparentize(black, .6);
+      //background-color: transparentize(black, .6);
     }
   }
 
   .usa_hero__overlay {
     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
-      transparentize($image-gradient-color-bottom, $transparency-bottom));
+      darken($image-gradient-color-bottom, $transparency-bottom));
     display: block;
     @include position(absolute, 0px 0px 0px 0px);
 
-    &:after {
-      content: '';
-      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
-        transparentize($image-gradient-color-right, $transparency-right));
-      display: block;
-      @include position(absolute, 0px 0px 0px 0px);
-    }
+    // &:after {
+    //   content: '';
+    //   @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
+    //     transparentize($image-gradient-color-right, $transparency-right));
+    //   display: block;
+    //   @include position(absolute, 0px 0px 0px 0px);
+    // }
   }
 }

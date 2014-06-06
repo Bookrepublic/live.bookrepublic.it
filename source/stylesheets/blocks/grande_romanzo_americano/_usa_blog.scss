@@ -8,7 +8,7 @@
   $blog-usa-image-width: 4em;
   $blog-usa-color: $base-font-color;
   $blog-usa-background: lighten($base-accent-color, 15);
-  $blog-usa-detail-color: transparentize($blog-usa-color, .5);
+  $blog-usa-detail-color: transparentize($dark-gray, .5);
   $blog-usa-image-vert-alignment: top;
 
   display: table;
@@ -45,8 +45,10 @@
     width: 100%;
 
     h1 {
+      font-family: $sans-serif;
       font-size: 1em;
       margin-bottom: .5em;
+      color: $dark-gray;
     }
 
     p {
