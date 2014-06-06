@@ -3,9 +3,30 @@
 //= require headroom.js/dist/headroom
 //= require headroom.js/dist/jQuery.headroom
 //= require typed.js/js/typed
-//= require masonry/dist/masonry.pkgd
 //= require imagesloaded/imagesloaded.pkgd
 //= require tooltipster/js/jquery.tooltipster
+//= require masonry/dist/masonry.pkgd
+//= require isotope/dist/isotope.pkgd
+
+//Isotope
+var $container = $('.usa_hero__container');
+// init
+$container.isotope({
+  getSortData: {
+    name: '[author-name]'
+  },
+  // options
+  itemSelector: '.usa_hero__container__item',
+  layoutMode: 'fitRows'
+});
+$container.imagesLoaded( function() {
+  $container.isotope('layout');
+});
+$('#sorts').on( 'click', 'div', function() {
+  var sortByValue = $(this).attr('data-sort-by');
+  $container.isotope({ sortBy: sortByValue });
+});
+
 
 //Masonry
 var container = document.querySelector('.usa_kit__list');

@@ -1,3 +1,6 @@
+$ipad: new-breakpoint(max-width 768px 4);
+$iphone: new-breakpoint(max-width 480px 4);
+
 .usa_hero {
   $image-gradient-color-top: rgba(0, 0, 0, 0.0);
   $transparency-top: .0;
@@ -15,19 +18,27 @@
   line-height: 0;
   width: 100%;
 
-  background: url(/images/writers.jpg);
+  background: url(/images/bg-home.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  padding-top: 60em;
-  padding-bottom: 4em;
+
+  padding-top: 10em;
+
+  @include media($ipad) {
+    padding-top: 19em;
+  }
+
+  @include media($iphone) {
+    padding-top: 25em;
+  }
 
   .usa_hero__copy {
     position: absolute;
     bottom: -10%;
     left: 50%;
     margin: auto;
-    z-index: 100;
+    z-index: 200;
     text-align: center;
     @include transform(translate(-50%, -50%));
 
@@ -39,11 +50,37 @@
 
     p {
       line-height: 1.5em;
-      padding: 1em 2em;
       position: relative;
       color: white;
       font-weight: 800;
       //background-color: transparentize(black, .6);
+    }
+  }
+
+  .usa_hero__container{
+    @include transform(translate(0, -10%));
+
+    @include media($ipad) {
+      @include transform(translate(0, -30%));
+    }
+
+    @include media($iphone) {
+      @include transform(translate(0, -40%));
+    }
+
+    .usa_hero__container__item {
+      height: 100px;
+      width: 25%;
+      position: relative;
+      z-index: 100;
+      text-align: center;
+      margin-bottom: 1em;
+      height: 300px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 
@@ -52,13 +89,43 @@
       darken($image-gradient-color-bottom, $transparency-bottom));
     display: block;
     @include position(absolute, 0px 0px 0px 0px);
+    z-index: 150;
+  }
+}
 
-    // &:after {
-    //   content: '';
-    //   @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
-    //     transparentize($image-gradient-color-right, $transparency-right));
-    //   display: block;
-    //   @include position(absolute, 0px 0px 0px 0px);
-    // }
+.usa_hero__button {
+  display: inline-block;
+  border: 3px solid $blue;
+  border-radius: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 6em;
+  height: 6em;
+  background: $blue;
+  color: white;
+  line-height: 1em;
+  font-weight: 700;
+  @include padding(1.3em 0 0 0);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  overflow: hidden;
+  right: 47.5%;
+  cursor: pointer;
+  @include transition (all 0.5s ease-in-out);
+  font-size: 0.6em;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+
+  &:hover {
+    background-color: $light-blue;
+  }
+
+  .usa_hero__button--red {
+
+  }
+
+  .usa_hero__button--white {
+
   }
 }

@@ -1,5 +1,5 @@
 ---
-layout: "base"
+layout: base
 ---
 
 // = partial "grande_romanzo_americano/partials/author_grid"
@@ -11,6 +11,30 @@ layout: "base"
       | Il grande romanzo Americano
     p
       | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+    #sorts
+      .usa_hero__button data-sort-by="name"
+        i.fa.fa-star.fa-3x
+      .usa_hero__button data-sort-by="name"
+        i.fa.fa-star.fa-3x
+      .usa_hero__button data-sort-by="name"
+        i.fa.fa-star.fa-3x
+  .usa_hero__container
+    .usa_hero__container__item author-name="DeLillo"
+      img src="/images/delillo.png"
+    .usa_hero__container__item author-name="Vonnegut"
+      img src="/images/vonnegut.png"
+    .usa_hero__container__item author-name="Foster Wallace"
+      img src="/images/dfw.png"
+    .usa_hero__container__item author-name="Roth"
+      img src="/images/roth.png"
+    .usa_hero__container__item author-name="Smith"
+      img src="/images/smith.png"
+    .usa_hero__container__item author-name="Franzen"
+      img src="/images/franzen.png"
+    .usa_hero__container__item author-name="Fitzgerald"
+      img src="/images/fitzgerald.png"
+    .usa_hero__container__item author-name="Didion"
+      img src="/images/didion.png"
   .usa_hero__overlay
 
 .layout--small
@@ -32,7 +56,7 @@ layout: "base"
     h2 Week 2
     p Week 2
 
-  // puoi anche non includerlo
+  // puoi anche non includerlo e utilizzarlo come blocco a sé. Modifica per l'scss
   = partial "grande_romanzo_americano/partials/usa_playoff"
 
 .usa_first_week
@@ -55,19 +79,19 @@ layout: "base"
         .usa_kit__ribbon.tooltip title="Questo è un bel tooltip"
           i.fa.fa-star.fa-2x
         img src="images/cover.jpg"
-    .usa_kit__item.usa_kit__item--small
+    .usa_kit__item.usa_kit__item.small
       .usa_kit__book
         img src="images/cover.jpg"
     .usa_kit__item.usa_kit__item
       .usa_kit__book
         img src="images/cover.jpg"
-    .usa_kit__item.usa_kit__item--big
+    .usa_kit__item.usa_kit__item.big
       .usa_kit__book
         img src="images/cover.jpg"
     .usa_kit__item
       .usa_kit__book
         img src="images/cover.jpg"
-    .usa_kit__item.usa_kit__item--small
+    .usa_kit__item.usa_kit__item.small
       .usa_kit__book
         img src="images/cover.jpg"
 
