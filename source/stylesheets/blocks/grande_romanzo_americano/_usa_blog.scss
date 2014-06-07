@@ -1,34 +1,12 @@
 .blog-usa__wrapper__button {
-  display: block;
-  border: 3px solid $turquoise;
-  border-radius: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  width: 5em;
-  height: 5em;
-  background: $turquoise;
-  color: #fff;
-  line-height: 1em;
-  font-weight: 700;
-  @include padding(1.4em 0 0 0);
-  text-align: center;
+  @include rounded-button(block, $turquoise, $green-sea);
   margin-left: auto;
   margin-right: auto;
-  text-transform: uppercase;
-  overflow: hidden;
-  right: 47.5%;
-  cursor: pointer;
-  @include transition (all 0.5s ease-in-out);
-  font-size: 0.6em;
-  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  @include padding(1.45em 0 0 0);
 
   a {
     color: white;
     text-decoration: none;
-  }
-
-  &:hover {
-    background-color: $green-sea;
   }
 }
 

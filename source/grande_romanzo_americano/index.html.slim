@@ -12,28 +12,26 @@ layout: base
     p
       | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
     #sorts
-      .usa_hero__button data-sort-by="name"
+      .usa_hero__button data-sort-by="name" title="Ordinali per nome"
         i.fa.fa-star.fa-3x
-      .usa_hero__button data-sort-by="name"
-        i.fa.fa-star.fa-3x
-      .usa_hero__button data-sort-by="name"
-        i.fa.fa-star.fa-3x
+      .usa_hero__button--red data-sort-by="date" title="Ordinali per data di nascita"
+        i.fa.fa-bars.fa-3x
   .usa_hero__container
-    .usa_hero__container__item author-name="DeLillo"
+    .usa_hero__container__item author-name="DeLillo" author-date="1936"
       img src="/images/delillo.png"
-    .usa_hero__container__item author-name="Vonnegut"
+    .usa_hero__container__item author-name="Vonnegut" author-date="1922"
       img src="/images/vonnegut.png"
-    .usa_hero__container__item author-name="Foster Wallace"
+    .usa_hero__container__item author-name="Foster Wallace" author-date="1962"
       img src="/images/dfw.png"
-    .usa_hero__container__item author-name="Roth"
+    .usa_hero__container__item author-name="Roth" author-date="1933"
       img src="/images/roth.png"
-    .usa_hero__container__item author-name="Smith"
+    .usa_hero__container__item author-name="Smith" author-date="1975"
       img src="/images/smith.png"
-    .usa_hero__container__item author-name="Franzen"
+    .usa_hero__container__item author-name="Franzen" author-date="1959"
       img src="/images/franzen.png"
-    .usa_hero__container__item author-name="Fitzgerald"
+    .usa_hero__container__item author-name="Fitzgerald" author-date="1896"
       img src="/images/fitzgerald.png"
-    .usa_hero__container__item author-name="Didion"
+    .usa_hero__container__item author-name="Didion" author-date="1934"
       img src="/images/didion.png"
   .usa_hero__overlay
 
@@ -77,7 +75,7 @@ layout: base
     .usa_kit__item
       .usa_kit__book
         .usa_kit__ribbon.tooltip title="Questo è un bel tooltip"
-          i.fa.fa-star.fa-2x
+          i.fa.fa-plus.fa-3x
         img src="images/cover.jpg"
     .usa_kit__item.usa_kit__item.small
       .usa_kit__book

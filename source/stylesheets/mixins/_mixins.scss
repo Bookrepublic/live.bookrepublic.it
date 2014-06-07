@@ -1,0 +1,25 @@
+@mixin rounded_button($display, $color, $hover-color) {
+  display: $display;
+  border: 3px solid $color;
+  border-radius: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: $rounded-button-width;
+  height: $rounded-button-height;
+  background: $color;
+  color: white;
+  line-height: 1em;
+  font-weight: 700;
+  @include padding(1.3em 0 0 0);
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  @include transition (all 0.5s ease-in-out);
+  font-size: 0.6em;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}

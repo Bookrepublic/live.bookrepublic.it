@@ -7,13 +7,15 @@
 //= require tooltipster/js/jquery.tooltipster
 //= require masonry/dist/masonry.pkgd
 //= require isotope/dist/isotope.pkgd
+//= require jQuery-One-Page-Nav/jquery.nav
 
 //Isotope
 var $container = $('.usa_hero__container');
 // init
 $container.isotope({
   getSortData: {
-    name: '[author-name]'
+    name: '[author-name]',
+    date: '[author-date]'
   },
   // options
   itemSelector: '.usa_hero__container__item',
@@ -69,15 +71,6 @@ $(document).ready(function() {
       }
     });
   });
-
-  // underline under the active nav item
-  $(".nav .nav-link").click(function() {
-    $(".nav .nav-link").each(function() {
-      $(this).removeClass("active-nav-item");
-    });
-    $(this).addClass("active-nav-item");
-    $(".nav .more").removeClass("active-nav-item");
-  });
 });
 
 //tooltipster
@@ -88,6 +81,20 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $('.usa_hero__button').tooltipster({
+    delay: 50,
+    contentAsHTML: true
+  });
+});
+
+$(document).ready(function() {
+  $('.usa_hero__button--red').tooltipster({
+    delay: 50,
+    contentAsHTML: true
+  });
+});
+
 //typed
 $(function(){
   $(".element").typed({
@@ -95,4 +102,9 @@ $(function(){
     typeSpeed: 30, // typing speed
     backDelay: 500, // pause before backspacing
   });
+});
+
+//scroll
+$(document).ready(function() {
+	$('#navigation-menu').onePageNav();
 });

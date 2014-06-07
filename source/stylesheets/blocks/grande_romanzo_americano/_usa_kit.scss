@@ -11,33 +11,11 @@
   }
 
   .usa_kit__ribbon {
-    display: block;
-    border: 3px solid $yellow;
-    border-radius: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 5em;
-    height: 5em;
-    background: $yellow;
-    color: #fff;
-    line-height: 1em;
-    font-weight: 700;
-    @include padding(1.4em 0 0 0);
-    text-align: center;
-    margin: -1.4em 1em 0 0;
-    text-transform: uppercase;
-    overflow: hidden;
+    @include rounded-button(block, $yellow, $light-yellow);
     position: absolute;
+    top: -1.8em;
     right: -2em;
     z-index: 100;
-    cursor: pointer;
-    @include transition (all 0.5s ease-in-out);
-    font-size: 0.6em;
-    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-
-    &:hover {
-      background-color: $light-yellow;
-    }
   }
 
   .usa_kit__list {
