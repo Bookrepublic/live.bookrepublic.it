@@ -10,9 +10,9 @@
 //= require jQuery-One-Page-Nav/jquery.nav
 
 //Isotope
-var $container = $('.usa_hero__container');
+var $containeriso = $('.usa_hero__container');
 // init
-$container.isotope({
+$containeriso.isotope({
   getSortData: {
     name: '[author-name]',
     date: '[author-date]'
@@ -21,25 +21,25 @@ $container.isotope({
   itemSelector: '.usa_hero__container__item',
   layoutMode: 'fitRows'
 });
-$container.imagesLoaded( function() {
-  $container.isotope('layout');
+$containeriso.imagesLoaded( function() {
+  $containeriso.isotope('layout');
 });
 $('#sorts').on( 'click', 'div', function() {
   var sortByValue = $(this).attr('data-sort-by');
-  $container.isotope({ sortBy: sortByValue });
+  $containeriso.isotope({ sortBy: sortByValue });
 });
 
 
 //Masonry
-var container = document.querySelector('.usa_kit__list');
-var msnry = new Masonry( container, {
+var $container = $('.usa_kit__list');
+$container.masonry ({
   // options
-  columnWidth: container.querySelector('.usa_kit__sizer'),
+  columnWidth: '.usa_kit__sizer',
   itemSelector: '.usa_kit__item'
 });
-msnry.bindResize()
-imagesLoaded( container, function() {
-  msnry.layout();
+$container.masonry('bindResize')
+$container.imagesLoaded( function() {
+  $container.masonry
 });
 
 //Header
@@ -61,7 +61,6 @@ $("#header").headroom("destroy");
 $(document).ready(function() {
   var menu = $('#navigation-menu');
   var menuToggle = $('#js-mobile-menu');
-  var signUp = $('.sign-up');
 
   $(menuToggle).on('click', function(e) {
     e.preventDefault();
