@@ -1,8 +1,78 @@
-.post__img--cover {
-  width: 100%;
-}
-
 article {
+
+  figure {
+    display: block;
+    width: 120%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    @include clearfix;
+    position: relative;
+    left: -10%;
+
+    @include media($iphone) {
+      width: 100%;
+      left: 0;
+    }
+
+    img {
+
+      display: inline-block;
+      float: left;
+      max-width: 70%;
+      height: auto;
+      @include margin(1.5em 0em 1.5em 0);
+
+      @include media($ipad) {
+        max-width: 60%;
+      }
+
+      @include media($iphone) {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    figcaption {
+        @include margin(1.5em 0em 1.5em 3%);
+        width: 27%;
+        display: inline-block;
+        color: transparentize($base-font-color, .6);
+        font-family: $serif;
+        font-style: italic;
+
+        @include media($ipad) {
+          @include margin(1.5em 0em 1.5em 3%);
+          width: 37%;
+        }
+
+        @include media($iphone) {
+          @include margin(0.3em 0em 1.5em 0em);
+          display: block;
+          max-width: 100%;
+          width: 100%;
+          left: 0;
+        }
+    }
+  }
+
+  .article_full_width {
+    @include margin(1.5em 0em 1.5em 0);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      color: transparentize($base-font-color, .6);
+      font-family: $serif;
+      font-style: italic;
+    }
+  }
 
   @include clearfix;
   text-align: left;

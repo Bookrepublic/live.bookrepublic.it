@@ -13,13 +13,13 @@
 
 .layout--blog {
   @extend .layout;
-  width: 50%;
+  width: 65%;
 
   @include media($ipad) {
-    width: 70%;
+    width: 80%;
   }
 
   @include media($iphone) {
-    width: 80%;
+    width: 90%;
   }
 }
