@@ -5,8 +5,21 @@
 }
 
 .layout--small {
-    @extend .layout;
+  @extend .layout;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout--blog {
+  @extend .layout;
+  width: 50%;
+
+  @include media($ipad) {
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  @include media($iphone) {
+    width: 80%;
+  }
 }

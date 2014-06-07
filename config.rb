@@ -8,7 +8,7 @@ activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
-  # blog.permalink = "{year}/{month}/{day}/{title}.html"
+  blog.permalink = "blog/{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
@@ -31,6 +31,7 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
+page "posts/*", layout: :post_layout
 
 ###
 # Slim conf
