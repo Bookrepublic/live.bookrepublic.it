@@ -1,32 +1,31 @@
 .usa_first_week {
   background-color: $asphalt;
   background-size: cover;
-  padding: 1em 0 0.5em 0; // se solo padding: 5em 0 12em 0;
+  padding: 5em 0 0.5em 0; // se solo padding: 5em 0 12em 0;
   position: relative;
   width: 100%;
   display: table;
+  color: $base-body-color;
   //margin-bottom: -1em; se solo usalo
 
   .usa_first_week__copy {
+    width: 50%;
     position: absolute;
     left: 50%;
     margin: auto;
     z-index: 100;
-    top: 10%; //se solo metti al 40%
+    //se solo metti al top: 10%;
     text-align: center;
 
     h2 {
       position: relative;
       font-family: $sans-serif;
-      color: white;
       left: -50%;
     }
 
     p {
-      padding: 1em 2em;
       position: relative;
       left: -50%;
-      color: white;
       font-weight: 800;
     }
   }

@@ -9,12 +9,32 @@
 	background-size: cover;
 	padding-bottom: 4em;
 
+	position: relative;
+
+	$image-gradient-color-top: rgba(0, 0, 0, 0.0);
+	$transparency-top: .0;
+	$image-gradient-color-bottom: $base-body-color;
+	$transparency-bottom: 1.0;
+	$vertical-angle: 180deg;
+
+	.hero__overlay {
+		@include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
+			darken($image-gradient-color-bottom, $transparency-bottom));
+		display: block;
+		@include position(absolute, 0px 0px 0px 0px);
+		z-index: 150;
+		position: absolute;
+	}
+
 	.hero__logo img {
 		height: 3em;
 		margin-bottom: 1em;
 	}
 
 	.hero__inner {
+		z-index: 200;
+		position: relative;
+
 		@include outer-container;
 		@include clearfix;
 		padding: 3em;

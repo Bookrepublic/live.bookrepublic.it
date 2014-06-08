@@ -96,17 +96,15 @@
   left: 50%;
   margin: auto;
   z-index: 100;
-  @include padding(2em 0em 0em 0em);
+  @include padding(3em 0em 0em 0em);
   text-align: center;
+  color: $base-body-color;
 
   h2 {
     font-family: $sans-serif;
-    color: white;
   }
 
   p {
-    padding: 1em 2em;
-    color: white;
     font-weight: 800;
   }
 }

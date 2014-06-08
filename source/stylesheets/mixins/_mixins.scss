@@ -7,7 +7,7 @@
   width: $rounded-button-width;
   height: $rounded-button-height;
   background: $color;
-  color: white;
+  color: $base-body-color;
   line-height: 1em;
   font-weight: 700;
   @include padding(1.3em 0 0 0);

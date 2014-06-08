@@ -30,31 +30,33 @@
       img src="/images/didion.png"
   .usa_hero__overlay
 
-.layout--small#iscriviti
-  .usa_text
-    h2
-      | Titolo 2
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
-    h3
-      | Titolo 3
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+.layout--small.f-layout-padding#iscriviti
+  = partial "grande_romanzo_americano/partials/usa_text"
 
-  #blog
+.usa_bebookers.f-layout-padding
+  .usa_bebookers__wrapper
+    img src="/images/bebookers.jpg"
+  .usa_bebookers__copy
+    h2
+      | BeBookers
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.
+
+.layout--small.f-layout-padding#blog
   = partial "grande_romanzo_americano/partials/blog"
 
 .usa_first_week#sfida
   .usa_first_week__copy
-    h2 Week 2
+    h2
+      | Prima settimana
     p Week 2
 
   // puoi anche non includerlo e utilizzarlo come blocco a sé. Modifica per l'scss
   = partial "grande_romanzo_americano/partials/usa_playoff"
 
-.usa_first_week
   .usa_first_week__copy
-    h2 Week 2
+    h2
+      | Seconda settimana
     p Week 2
 
   = partial "grande_romanzo_americano/partials/usa_playoff"

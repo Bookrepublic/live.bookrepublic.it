@@ -5,13 +5,12 @@
   @include padding(1.45em 0 0 0);
 
   a {
-    color: white;
+    color: $base-body-color;
     text-decoration: none;
   }
 }
 
 .blog-usa__wrapper {
-  @include margin(0 0 5em 0);
 }
 
 .blog-usa {

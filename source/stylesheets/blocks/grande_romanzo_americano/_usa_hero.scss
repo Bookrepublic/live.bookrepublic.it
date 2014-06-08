@@ -7,13 +7,7 @@ $iphone: new-breakpoint(max-width 480px 4);
   $image-gradient-color-bottom: rgba(0, 0, 0, 1);
   $transparency-bottom: .8;
   $vertical-angle: 180deg;
-
-  $image-gradient-color-left: rgba(26, 188, 156,0.0);
-  $transparency-left: .8;
-  $image-gradient-color-right: rgba(0, 0, 0, 0.6);
-  $transparency-right: 1.0;
-  $horizontal-angle: 180deg;
-
+  
   position: relative;
   line-height: 0;
   width: 100%;
@@ -24,6 +18,7 @@ $iphone: new-breakpoint(max-width 480px 4);
   background-size: cover;
 
   padding-top: 10em;
+  color: $base-body-color;
 
   @include media($ipad) {
     padding-top: 19em;
@@ -40,18 +35,25 @@ $iphone: new-breakpoint(max-width 480px 4);
     margin: auto;
     z-index: 200;
     text-align: center;
+
+    @include media($ipad) {
+      bottom: -13%;
+    }
+
+    @include media($iphone) {
+      bottom: -20%;
+    }
+
     @include transform(translate(-50%, -50%));
 
     h1 {
       family: $sans-serif;
       @include margin(0em 0em 2em 0em);
-      color: white;
     }
 
     p {
       line-height: 1.5em;
       position: relative;
-      color: white;
       font-weight: 800;
       //background-color: transparentize(black, .6);
     }

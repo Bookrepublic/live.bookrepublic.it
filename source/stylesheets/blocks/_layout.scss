@@ -6,9 +6,17 @@
 
 .layout--small {
   @extend .layout;
-  width: 70%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
+
+  @include media($ipad) {
+    width: 70%;
+  }
+
+  @include media($iphone) {
+    width: 80%;
+  }
 }
 
 .layout--blog {

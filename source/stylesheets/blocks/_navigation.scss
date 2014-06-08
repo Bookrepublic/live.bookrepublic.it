@@ -1,7 +1,4 @@
 header.navigation {
-  background-color: $turquoise;
-  border-bottom: 1px solid $dark-gray;
-
   ul{
 
     li {
@@ -12,7 +9,7 @@ header.navigation {
 
     li.current {
       a {
-        color: rgba(255, 255, 255, 1.0);
+        color: $base-a-color;
       }
     }
   }

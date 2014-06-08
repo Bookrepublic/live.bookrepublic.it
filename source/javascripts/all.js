@@ -29,6 +29,19 @@ $('#sorts').on( 'click', 'div', function() {
   $containeriso.isotope({ sortBy: sortByValue });
 });
 
+//Isotope blog
+var $containerblog = $('.blog_home__container');
+// init
+$containerblog.isotope({
+  // options
+  itemSelector: '.blog_home__item',
+  masonry: {
+    columnWidth: '.blog_home__sizer'
+  }
+});
+$containerblog.imagesLoaded( function() {
+  $containerblog.isotope('layout');
+});
 
 //Masonry
 var $container = $('.usa_kit__list');
