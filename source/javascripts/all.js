@@ -39,7 +39,7 @@ $container.masonry ({
 });
 $container.masonry('bindResize')
 $container.imagesLoaded( function() {
-  $container.masonry
+  $container.masonry('layout');
 });
 
 //Header

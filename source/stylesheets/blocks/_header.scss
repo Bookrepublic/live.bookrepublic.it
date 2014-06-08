@@ -28,12 +28,13 @@ header.navigation {
   width: 100%;
   z-index: 999;
   position: fixed;
+  height: 5em;
 
   .menu-wrapper {
     @include outer-container;
     @include clearfix;
     position: relative;
-    z-index: 9999;
+    top: 12%;
   }
 
   .logo {
