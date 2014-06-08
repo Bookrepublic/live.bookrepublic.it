@@ -173,6 +173,7 @@ article {
     font-size: 1.4em;
     line-height: 1.3em;
     color: $dark-gray;
+    padding: 0em;
   }
 
   .author {
@@ -221,12 +222,14 @@ article {
       font-size: 1em;
       margin-bottom: .5em;
       font-style: italic;
+      font-family: $serif;
     }
 
     p {
       margin-bottom: .5em;
       font-style: italic;
-      font-size: .8em;
+      font-size: .9em;
+      font-family: $serif;
     }
 
     .author__content--detail {
