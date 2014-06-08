@@ -1,3 +1,6 @@
+$ipad: new-breakpoint(max-width 768px 4);
+$iphone: new-breakpoint(max-width 480px 4);
+
 .usa_playoff {
 
   @include outer-container;

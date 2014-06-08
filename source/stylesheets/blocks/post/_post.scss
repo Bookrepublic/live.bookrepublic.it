@@ -40,7 +40,7 @@ article {
         @include margin(1.5em 0em 1.5em 3%);
         width: 27%;
         display: inline-block;
-        color: transparentize($base-font-color, .6);
+        color: $dark-gray;
         font-family: $serif;
         font-style: italic;
 
@@ -68,7 +68,7 @@ article {
     }
 
     p {
-      color: transparentize($base-font-color, .6);
+      color: $dark-gray;
       font-family: $serif;
       font-style: italic;
     }
@@ -165,9 +165,75 @@ article {
     width: 3em;
   }
 
-  p.author {
+  blockquote {
     font-family: $serif;
-    font-size: 1.2em;
+    text-align: center;
     font-style: italic;
+    border: none;
+    font-size: 1.4em;
+    line-height: 1.3em;
+    color: $dark-gray;
   }
+
+  .author {
+  $comment-gutter: 1.4em;
+  $comment-image-padding: .7em;
+  $comment-image-width: 4em;
+  $comment-color: $base-font-color;
+  $comment-background: lighten($base-accent-color, 15);
+  $comment-detail-color: transparentize($comment-color, .5);
+  $comment-image-vert-alignment: top;
+
+  display: table;
+  width: 100%;
+  margin-bottom: $base-line-height;
+  padding-bottom: 1em;
+
+  .author__image,
+  .author__content {
+    display: table-cell;
+    vertical-align: $comment-image-vert-alignment;
+  }
+
+  .author__image {
+    width: $comment-image-width;
+    height: $comment-image-width;
+    border-radius: 100%;
+    padding: $comment-image-padding;
+    background: url(/images/post.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: block;
+    margin-right: 1em;
+    @include transition (all 0.2s ease-in-out);
+
+    a:hover {
+
+    }
+  }
+
+  .author__content {
+    color: $dark-gray;
+    width: 100%;
+
+    h4 {
+      font-size: 1em;
+      margin-bottom: .5em;
+      font-style: italic;
+    }
+
+    p {
+      margin-bottom: .5em;
+      font-style: italic;
+      font-size: .8em;
+    }
+
+    .author__content--detail {
+      font-size: .8em;
+      color: $comment-detail-color;
+      display: inline-block;
+    }
+  }
+}
 }
