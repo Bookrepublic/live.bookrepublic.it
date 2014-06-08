@@ -55,9 +55,6 @@ $("header").headroom({
   }
 });
 
-// to destroy
-$("#header").headroom("destroy");
-
 $(document).ready(function() {
   var menu = $('#navigation-menu');
   var menuToggle = $('#js-mobile-menu');
@@ -65,6 +62,15 @@ $(document).ready(function() {
   $(menuToggle).on('click', function(e) {
     e.preventDefault();
     menu.slideToggle(function(){
+      if(menu.is(':hidden')) {
+        menu.removeAttr('style');
+      }
+    });
+  });
+
+  $(document).on('scroll', function(e) {
+    e.preventDefault();
+    menu.slideUp(function(){
       if(menu.is(':hidden')) {
         menu.removeAttr('style');
       }
