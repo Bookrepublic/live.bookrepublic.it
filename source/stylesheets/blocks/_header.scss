@@ -38,12 +38,12 @@ header.navigation {
 
   .logo {
     float: left;
-    max-height: $navigation-height;
+    max-height: 80px;
     padding-left: $navigation-padding;
     padding-right: 2em;
 
     img {
-      max-height: $navigation-height;
+      max-height: 80px;
       padding: .8em 0;
     }
   }
@@ -97,7 +97,7 @@ header.navigation {
   ul li {
     background: $navigation-background;
     display: block;
-    line-height: $navigation-height;
+    line-height: 80px;
     overflow: hidden;
     padding-right: .8em;
     text-align: right;
@@ -107,7 +107,7 @@ header.navigation {
     @include media ($horizontal-bar-mode) {
       background: transparent;
       display: inline;
-      line-height: $navigation-height;
+      line-height: 80px;
       padding-right: 2em;
       text-decoration: none;
       width: auto;

@@ -70,11 +70,12 @@ $(document).ready(function() {
 
   $(document).on('scroll', function(e) {
     e.preventDefault();
-    menu.slideUp(function(){
-      if(menu.is(':hidden')) {
-        menu.removeAttr('style');
-      }
-    });
+    if(menuToggle.is(':visible')) {
+      menu.slideUp();
+    };
+    if(menu.is(':hidden')) {
+      menu.removeAttr('style');
+    }
   });
 });
 
