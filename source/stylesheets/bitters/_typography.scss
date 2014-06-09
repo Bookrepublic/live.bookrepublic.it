@@ -96,7 +96,7 @@ blockquote {
 }
 
 cite {
-  color: lighten($base-font-color, 25);
+  color: $base-font-color;
   font-style: italic;
 
   &:before {

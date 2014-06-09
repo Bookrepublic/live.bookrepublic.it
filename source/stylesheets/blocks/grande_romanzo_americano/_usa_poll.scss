@@ -42,7 +42,7 @@ $iphone: new-breakpoint(max-width 480px 4);
 
     .usa_playoff__cards--card-image {
       overflow: hidden;
-      max-height: 150px;
+      max-height: 180px;
 
       img {
         width: 100%;
@@ -106,7 +106,7 @@ $iphone: new-breakpoint(max-width 480px 4);
   width: 100%;
   height:0;
   padding-bottom: 100%;
-  background: $red;
+  background: $light-red;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -149,7 +149,7 @@ $iphone: new-breakpoint(max-width 480px 4);
   width: 100%;
   height:0;
   padding-bottom: 100%;
-  background: $red;
+  background: $light-red;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;

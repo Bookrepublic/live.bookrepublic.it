@@ -176,6 +176,18 @@ article {
     padding: 0em;
   }
 
+  cite {
+    width: 80%;
+    display: block;
+    font-family: $serif;
+    text-align: left;
+    font-style: italic;
+    font-size: 1.4em;
+    line-height: 1.3em;
+    padding: 2em 0em 2em 0em;
+    margin-left: 1em;
+  }
+
   .author {
   $comment-gutter: 1.4em;
   $comment-image-padding: .7em;
@@ -221,7 +233,6 @@ article {
     h4 {
       font-size: 1em;
       margin-bottom: .5em;
-      font-style: italic;
       font-family: $serif;
     }
 

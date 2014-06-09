@@ -24,8 +24,7 @@
     background-color: $red;
     width: 50%;
     height: 400px;
-    display: block;
-    position: relative;
+    padding: 0.8em;
   }
 
   .blog_home__item.small {
@@ -33,5 +32,12 @@
     background-color: $blue;
     width: 25%;
     height: 100px;
+  }
+
+  .blog_home__item.big {
+    @extend .blog_home__item;
+    background-color: $yellow;
+    width: 100%;
+    height: 250px;
   }
 }
