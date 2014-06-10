@@ -1,5 +1,7 @@
 article {
 
+  @include padding(5em 0em 0em 0em);
+
   figure {
     display: block;
     width: 120%;
@@ -56,6 +58,31 @@ article {
           width: 100%;
           left: 0;
         }
+    }
+  }
+
+  .article__ebook_box {
+    display: block;
+    width: 100%;
+    @include margin(3.5em 0em 1.5em 0);
+    position: relative;
+
+    .article__ebook_box__book {
+      display: inline-block;
+      width: 40%;
+
+      img {
+        height: auto;
+        box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+      }
+    }
+    .article__ebook_box__meta {
+      display: inline-block;
+      position: relative;
+      bottom: 0px;
+      width: 55%;
+      padding-left: 5%;
+      font-family: $sans-serif;
     }
   }
 
@@ -185,7 +212,11 @@ article {
     font-size: 1.4em;
     line-height: 1.3em;
     padding: 2em 0em 2em 0em;
-    margin-left: 1em;
+    //margin-left: 1em;
+
+    @include media($iphone) {
+      width: 100%;
+    }
   }
 
   .author {

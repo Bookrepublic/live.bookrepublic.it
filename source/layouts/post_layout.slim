@@ -6,6 +6,7 @@
         | Category
       h1
         = current_article.title
+        = current_article.title
       h2
         | These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".
       p.date
@@ -26,6 +27,16 @@
         | Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
       p
         | Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
+      .article__ebook_box
+        .article__ebook_box__book
+          img src="/images/9788858408650.jpg"
+        .article__ebook_box__meta
+          h2 Title Title Title Title Title
+          h3 Subtitle
+          p di Mamma Title Title Title
+          p &euro; 5.30
+      p
+        | Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
       cite
         | Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
         | Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
@@ -36,6 +47,15 @@
         p Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
       p
         | Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
+      ol
+        - data.authors.each do |author|
+          li
+            = author.display_name
+            - if author.display_name == "c"
+                p Ok
+            - else
+                p NO
+
       hr
       .author
         .author__image
