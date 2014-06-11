@@ -1,95 +1,13 @@
 // = partial "grande_romanzo_americano/partials/author_grid"
 
-.usa_hero#evento
-  .usa_hero__copy
-    h1
-      | Il grande romanzo Americano
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
-    #sorts
-      .usa_hero__button data-sort-by="name" title="Ordinali per nome"
-        i.fa.fa-star.fa-3x
-      .usa_hero__button--red data-sort-by="date" title="Ordinali per data di nascita"
-        i.fa.fa-bars.fa-3x
-  .usa_hero__container
-    .usa_hero__container__item author-name="DeLillo" author-date="1936"
-      img src="/images/delillo.png"
-    .usa_hero__container__item author-name="Vonnegut" author-date="1922"
-      img src="/images/vonnegut.png"
-    .usa_hero__container__item author-name="Foster Wallace" author-date="1962"
-      img src="/images/dfw.png"
-    .usa_hero__container__item author-name="Roth" author-date="1933"
-      img src="/images/roth.png"
-    .usa_hero__container__item author-name="Smith" author-date="1975"
-      img src="/images/smith.png"
-    .usa_hero__container__item author-name="Franzen" author-date="1959"
-      img src="/images/franzen.png"
-    .usa_hero__container__item author-name="Fitzgerald" author-date="1896"
-      img src="/images/fitzgerald.png"
-    .usa_hero__container__item author-name="Didion" author-date="1934"
-      img src="/images/didion.png"
-  .usa_hero__overlay
+= partial "grande_romanzo_americano/partials/hero"
 
-.layout--small.f-layout-padding#iscriviti
-  = partial "grande_romanzo_americano/partials/usa_text"
+= partial "grande_romanzo_americano/partials/usa_text"
 
-.usa_bebookers.f-layout-padding
-  .usa_bebookers__wrapper
-    img src="/images/bebookers.jpg"
-  .usa_bebookers__copy
-    h2
-      | BeBookers
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.
+= partial "grande_romanzo_americano/partials/bebookers"
 
-.layout--small.f-layout-padding#blog
-  = partial "grande_romanzo_americano/partials/blog"
+= partial "grande_romanzo_americano/partials/blog"
 
-.usa_first_week#sfida
-  .usa_first_week__copy
-    h2
-      | Prima settimana
-    p Week 2
+= partial "grande_romanzo_americano/partials/sfida"
 
-  // puoi anche non includerlo e utilizzarlo come blocco a sé. Modifica per l'scss
-  = partial "grande_romanzo_americano/partials/usa_playoff"
-
-  .usa_first_week__copy
-    h2
-      | Seconda settimana
-    p Week 2
-
-  = partial "grande_romanzo_americano/partials/usa_playoff_second"
-
-.usa_kit#kit
-  .usa_kit__copy
-    h2
-      | Prova
-    p
-      | lorem ipsum
-  .usa_kit__list
-    .usa_kit__sizer
-    .usa_kit__item
-      .usa_kit__book
-        .usa_kit__ribbon.tooltip title="Questo è un bel tooltip"
-          i.fa.fa-plus.fa-3x
-        img src="/images/cover.jpg"
-    .usa_kit__item.usa_kit__item.small
-      .usa_kit__book
-        img src="/images/cover.jpg"
-    .usa_kit__item.usa_kit__item
-      .usa_kit__book
-        img src="/images/cover.jpg"
-    .usa_kit__item.usa_kit__item.big
-      .usa_kit__book
-        img src="/images/cover.jpg"
-    .usa_kit__item
-      .usa_kit__book
-        img src="/images/cover.jpg"
-    .usa_kit__item.usa_kit__item.small
-      .usa_kit__book
-        img src="/images/cover.jpg"
-
-//sondaggione
-//cartina
-//kit + sconti
+= partial "grande_romanzo_americano/partials/kit"
