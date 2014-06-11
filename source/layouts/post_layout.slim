@@ -3,13 +3,13 @@
   .layout--blog
     article
       p.meta
-        | Category
+        = current_article.tags[0]
       h1
         = current_article.title
       h2
         | These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".
       p.date
-        | 30 marzo 2014
+        =current_article.date.strftime('%e %b %Y')
       == yield
       p
         | Consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
@@ -46,20 +46,15 @@
         p Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
       p
         | Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
-      ol
-        - data.authors.each do |author|
-          li
-            = author.display_name
-            - if author.display_name == "= current_article.data.author"
-                p Ok
-            - else
-                p NO
-
+      a hre="" Questo è il mio link
+      | Consequatur ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.
       hr
-      .author
-        .author__image
-        .author__content
-          h4
-            = current_article.data.author
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.
-          p.author__content--detail Date or details about this post
+      - data.authors.each do |author|
+        .author
+          - if author.display_name == current_article.data.author
+            .author__image style="background: url(#{author.photo}); background-size:cover;"
+            .author__content
+              h4
+                = current_article.data.author
+              p
+              p.author__content--detail Date or details about this post

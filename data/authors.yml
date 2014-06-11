@@ -1,9 +1,18 @@
 - display_name: 'Daria Bernardoni'
   name: Daria
   cognome: Bernardoni
-  photo:
+  photo: '/images/blog_authors/daria_bernardoni.jpg'
   web: 'http://www.filodaria.it'
   twitter: 'filodaria'
   facebook:
   google:
-  quote: ''
+  quote: 'Libri, bit e massimi sistemi.'
+- display_name: 'Matteo Scurati'
+  name: Matteo
+  cognome: Scurati
+  photo: '/images/blog_authors/matteo_scurati.jpg'
+  web: 'http://www.filodaria.it'
+  twitter: 'filodaria'
+  facebook:
+  google:
+  quote: 'Libri, bit e massimi sistemi.'

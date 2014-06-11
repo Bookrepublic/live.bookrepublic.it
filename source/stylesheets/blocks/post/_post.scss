@@ -82,7 +82,16 @@ article {
       bottom: 0px;
       width: 55%;
       padding-left: 5%;
-      font-family: $sans-serif;
+
+      h2 {
+        font-family: $sans-serif;
+        font-style: normal;
+        margin-bottom: 0em;
+      }
+
+      h3 {
+        font-family: $sans-serif;
+      }
     }
   }
 
@@ -244,7 +253,6 @@ article {
     height: $comment-image-width;
     border-radius: 100%;
     padding: $comment-image-padding;
-    background: url(/images/post.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
