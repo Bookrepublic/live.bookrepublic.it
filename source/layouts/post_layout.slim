@@ -6,7 +6,6 @@
         | Category
       h1
         = current_article.title
-        = current_article.title
       h2
         | These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".
       p.date
@@ -51,7 +50,7 @@
         - data.authors.each do |author|
           li
             = author.display_name
-            - if author.display_name == "c"
+            - if author.display_name == "= current_article.data.author"
                 p Ok
             - else
                 p NO
@@ -60,6 +59,7 @@
       .author
         .author__image
         .author__content
-          h4 Daria Bernardoni
+          h4
+            = current_article.data.author
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.
           p.author__content--detail Date or details about this post
