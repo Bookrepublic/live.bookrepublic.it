@@ -1,6 +1,16 @@
 .usa_text {
   text-align: center;
 
+  .usa_text_share {
+    display: block;
+    margin-bottom: 3em;
+
+    li {
+      @include padding(0em 2em 0em 2em);
+      display: inline-block;
+    }
+  }
+
   h2 {
     font-family: $serif;
     color: $asphalt;
@@ -14,5 +24,28 @@
   p {
     font-family: $sans-serif;
     color: $light-asphalt;
+  }
+
+  .usa_text__button {
+    display: block;
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+    a {
+      @include transition(all 0.2s ease-in-out);
+      text-transform: uppercase;
+      font-weight: 800;
+      border: 2px solid $asphalt;
+      @include padding(0.9em 0.9em 0.9em 0.9em);
+      @include border-top-radius(5px);
+      @include border-bottom-radius(5px);
+      @include border-left-radius(5px);
+      @include border-right-radius(5px);
+      color: $base-font-color;
+    }
+
+    a:hover {
+      background-color: rgba(189, 195, 199,0.4);
+    }
   }
 }
