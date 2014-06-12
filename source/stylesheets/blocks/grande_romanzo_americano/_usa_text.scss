@@ -35,6 +35,16 @@
     color: $light-asphalt;
   }
 
+  .usa_text--five {
+
+    p {
+      //font-family: $serif;
+      text-transform: uppercase;
+      //font-weight: bold;
+      line-height: 1.2em;
+    }
+  }
+
   .usa_text__button {
     display: block;
     margin-top: 3em;

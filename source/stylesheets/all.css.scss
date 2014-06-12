@@ -4,9 +4,12 @@
 @import "bitters/bitters";   /* Bitters needs to be imported before Neat */
 @import "neat";
 
-// Google Font
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
-@import url(http://fonts.googleapis.com/css?family=Radley);
+// Font Face
+@include font-face(Noto Sans, '/fonts/notosans/notosans-regular-webfont');
+@include font-face(Noto Sans, '/fonts/notosans/notosans-bold-webfont', bold);
+@include font-face(Noto Sans, '/fonts/notosans/notosans-italic-webfont', normal, italic);
+@include font-face(Radley, '/fonts/radley/radley-regular-webfont');
+@include font-face(Radley, '/fonts/radley/radley-italic-webfont', normal, italic);
 
 // FontAwesome
 @import "font-awesome/scss/font-awesome";
