@@ -1,3 +1,14 @@
+.tool {
+  a {
+    color: $white;
+    @include transition(all 0.2s ease-in-out);
+  }
+
+  a:hover{
+    color: rgba(241, 196, 15,1.0);
+  }
+}
+
 .usa_kit {
   background: $blue;
   @include padding(2em 2em 2em 2em);

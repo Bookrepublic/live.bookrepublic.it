@@ -96,14 +96,16 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.tooltip').tooltipster({
     trigger: 'click',
-    delay: 50
+    delay: 50,
+    contentAsHTML: true,
+    interactive: true
   });
 });
 
 $(document).ready(function() {
   $('.usa_hero__button').tooltipster({
     delay: 50,
-    contentAsHTML: true
+    contentAsHTML: true,
   });
 });
 
