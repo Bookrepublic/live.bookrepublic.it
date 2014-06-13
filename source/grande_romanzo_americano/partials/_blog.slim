@@ -17,7 +17,9 @@
               = article.data.excerpt
           p.blog-usa__detail
             | di
-            =<> article.data.author
+            =< article.data.author
+            | ,
+            =< article.date.strftime('%e %b %Y')
 
       .blog-usa
         .blog-usa__image
