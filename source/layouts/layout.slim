@@ -9,6 +9,8 @@ html
     // <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
     // <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     = stylesheet_link_tag "all"
+    /[if lt IE 9]
+      = javascript_include_tag "ie8"
   body class=page_classes
     = partial "partials/header"
 
