@@ -54,7 +54,7 @@
       @include transition(all 0.2s ease-in-out);
       text-transform: uppercase;
       font-weight: 800;
-      border: 2px solid $asphalt;
+      border: 0.2em solid $asphalt;
       @include padding(0.9em 0.9em 0.9em 0.9em);
       @include border-top-radius(5px);
       @include border-bottom-radius(5px);

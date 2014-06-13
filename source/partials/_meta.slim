@@ -16,23 +16,23 @@
 / <meta name="twitter:card"           content="summary">
 
 //Facebook
-meta[content="http://www.bookrepublic.it##{data.page.cover_image}" property="og:image"]
+meta[content="http://www.bookrepublic.it#{current_page.data.page_cover_image}" property="og:image"]
 meta[content="Bookrepublic live: i libri dal vivo" property="og:site_name"]
 meta[content="1292377305" property="fb:admins"]
 meta[content="1707792040" property="fb:admins"]
 meta[content="it_IT" property="og:locale"]
-meta[name="#{data.page.page_name}" content="#{data.page.page_description}"]
+meta[name="#{current_page.data.page_name}" content="#{current_page.data.page_description}"]
 meta[content="Bookrepublic" property="fb:profile_id"]
 meta[content="article" property="og:type"]
 meta[content="http://www.bookrepublic.it#{current_page.url}" property="og:url"]
-meta[content="#{data.page.title}" property="og:title"]
-meta[content="#{data.page.page_description}" property="og:description"]
+meta[content="#{current_page.data.page_title}" property="og:title"]
+meta[content="#{current_page.data.page_description}" property="og:description"]
 meta[content="Book" property="article:section"]
 
 //Twitter
 meta[content="summary_large_images" name="twitter:card"]
 meta[content="@Bookrep" name="twitter:site"]
 meta[content="@Bookrep" name="twitter:creator"]
-meta[content="#{data.page.page_name}" name="twitter:title"]
-meta[content="#{data.page.page_description}" name="twitter:description"]
-meta[content="http://www.bookrepublic.it#{data.page.cover_image}" name="twitter:image:src"]
+meta[content="#{current_page.data.page_name}" name="twitter:title"]
+meta[content="#{current_page.data.page_description}" name="twitter:description"]
+meta[content="http://www.bookrepublic.it#{current_page.data.cover_image}" name="twitter:image:src"]

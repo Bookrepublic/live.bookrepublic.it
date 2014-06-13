@@ -6,8 +6,9 @@
         = current_article.tags[0]
       h1
         = current_article.title
-      h2
-        | These override some of the styles specified in the Scss files "variables" and "typography" in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won't need the wrapping class "type-system-name".
+      - if current_article.data.excerpt
+        h2
+          = current_article.data.excerpt
       p.date
         =current_article.date.strftime('%e %b %Y')
       == yield
