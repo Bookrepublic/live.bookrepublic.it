@@ -5,6 +5,7 @@ html
     meta[http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"]
     title
       = data.page.page_title
+    meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"]
     = partial "partials/meta"
     // <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
     // <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
@@ -14,5 +15,7 @@ html
   body class=page_classes
 
     == yield
+
+  = partial "partials/analytics"
 
   = javascript_include_tag  "all"

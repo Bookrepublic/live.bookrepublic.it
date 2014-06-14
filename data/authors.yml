@@ -3,10 +3,11 @@
   cognome: Bernardoni
   photo: '/images/blog_authors/daria_bernardoni.jpg'
   web: 'http://www.filodaria.it'
-  twitter: 'filodaria'
-  facebook:
-  google:
-  quote: 'Libri, bit e massimi sistemi.'
+  twitter: 'https://twitter.com/filodaria'
+  facebook: 'https://www.facebook.com/filodaria'
+  linkedin: 'http://it.linkedin.com/in/dariabernardoni/'
+  google: 'https://plus.google.com/+DariaBernardoni/'
+  quote: 'Dopo anni consumati a studiare massimi sistemi, c’è una domanda che i filosofi continuano a formulare e riformulare dopo la laurea: “Con l’hamburger vuoi anche le patatine?”. Fuggita miracolosamente a questo destino già scritto, Daria Bernardoni si occupa di editoria digitale e web per Bookrepublic dal 2010. La riconoscete perché parla spesso di creature strane come troll e lurker.'
 - display_name: 'Matteo Scurati'
   name: Matteo
   cognome: Scurati

@@ -1,35 +1,59 @@
-.hero
-  .hero__inner
-    a.hero-logo href=""
-      img src="" alt=""
-    .hero__copy
-      img src="" alt=""
-      h1
-        | Titolo
-      p
-        |  A few reasons why this product is worth using, who is it for and why do they need it.
-    button
-      | Learn more
-  .hero__overlay
+---
+page_title: 'Un brindisi al grande romanzo americano'
+page_cover_image: '/images/usa/cover.jpg'
+page_name: 'Un brindisi al grande romanzo americano'
+page_description: 'Vieni con noi il 3 luglio 2014 da Open a Milano per fare un brindisi al grande romanzo americano'
+---
 
-.layout
-  h2
-    | Mamma Articles
-  ol
-    - blog.articles[0...10].each do |article|
-      li
-        = link_to article.title, article
-        span<>
-          = article.date.strftime('%b %e')
-  h2
-    | Tags
-  ol
-    - blog.tags.each do |tag, articles|
-      li
-        = link_to "#{tag} (#{articles.size})", tag_path(tag)
-  h2
-    | By Year
-  ol
-    - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-      li
-        = link_to "#{year} (#{articles.size})", blog_year_path(year)
+= partial "grande_romanzo_americano/partials/header"
+
+// = partial "grande_romanzo_americano/partials/author_grid"
+
+= partial "grande_romanzo_americano/partials/hero"
+
+= partial "grande_romanzo_americano/partials/usa_text"
+
+= partial "grande_romanzo_americano/partials/kit"
+
+= partial "grande_romanzo_americano/partials/blog"
+
+= partial "grande_romanzo_americano/partials/sfida"
+
+= partial "grande_romanzo_americano/partials/bebookers"
+
+/ Qui la home non appena l'abbiamo
+/ .hero
+/   .hero__inner
+/     a.hero-logo href=""
+/       img src="" alt=""
+/     .hero__copy
+/       img src="" alt=""
+/       h1
+/         | Titolo
+/       p
+/         |  A few reasons why this product is worth using, who is it for and why do they need it.
+/     button
+/       | Learn more
+/   .hero__overlay
+/
+/ .layout
+/   h2
+/     | Mamma Articles
+/   ol
+/     - blog.articles[0...10].each do |article|
+/       li
+/         = link_to article.title, article
+/         span<>
+/           = article.date.strftime('%b %e')
+/   h2
+/     | Tags
+/   ol
+/     - blog.tags.each do |tag, articles|
+/       li
+/         = link_to "#{tag} (#{articles.size})", tag_path(tag)
+/   h2
+/     | By Year
+/   ol
+/     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+/       li
+/         = link_to "#{year} (#{articles.size})", blog_year_path(year)
