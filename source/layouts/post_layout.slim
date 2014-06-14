@@ -3,7 +3,7 @@
   .layout--blog
     article
       p.meta
-        = current_article.tags[0]
+        = current_page.data.tags.split(", ").join(", ")
       h1
         = current_article.title
       - if current_article.data.excerpt
@@ -11,6 +11,16 @@
           = current_article.data.excerpt
       p.date
         =current_article.date.strftime('%e %b %Y')
+      .article__social
+        ul
+          li
+            a.fa.fa-facebook-square.fa-2x href="https://www.facebook.com/sharer/sharer.php?u=http://live.bookrepublic.it#{current_page.url}"
+          li
+            a.fa.fa-twitter-square.fa-2x href="http://twitter.com/share?url=http://live.bookrepublic.it#{current_page.url}&text=#{current_article.title}"
+          li
+            a.fa.fa-google-plus-square.fa-2x href="https://plus.google.com/share?url=http://live.bookrepublic.it#{current_page.url}"
+          li
+            a.fa.fa-linkedin-square.fa-2x href="http://www.linkedin.com/shareArticle?url=http://live.bookrepublic.it#{current_page.url}"
       == yield
       hr
       - data.authors.each do |author|
@@ -21,4 +31,14 @@
               h4
                 = current_article.data.author
               p
-              p.author__content--detail Date or details about this post
+                = author.quote
+              .author__content--detail
+                ul
+                  li
+                    a.fa.fa-facebook.fa-2x href="#"
+                  li
+                    a.fa.fa-twitter.fa-2x href="#"
+                  li
+                    a.fa.fa-google-plus.fa-2x href="#"
+                  li
+                    a.fa.fa-linkedin.fa-2x href="#"

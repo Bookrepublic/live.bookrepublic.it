@@ -1,38 +1,58 @@
-/ <meta name="description=" content="{{ page.description }}">
-/ <meta property="fb:app_id"          content="269829379846399" />
-/ <meta property="fb:profile_id"      content="40kbooks" />
-/ <meta property="og:type"            content="article" />
-/ <meta property="og:url"             content="{{ site.url }}{{ page.url }}" />
-/ <meta property="og:title"           content="{{ page.title }}" />
-/ <meta property="og:description"     content="{{ page.content | strip_html | truncate:200 }}">
-/ <meta property="og:image"           content="{{ site.url }}{{ img.url }}">
-/
-/ <meta name="twitter:card"           content="summary_large_image">
-/ <meta name="twitter:site"           content="@40kbooks">
-/ <meta name="twitter:creator"        content="@{{ author.twitter }}">
-/ <meta name="twitter:title"          content="{{ page.title }}">
-/ <meta name="twitter:description"    content="{{ page.description }}">
-/ <meta name="twitter:image:src"      content="{{ site.url }}{{ page.cover }}">
-/ <meta name="twitter:card"           content="summary">
+- if current_page.path.include? "post"
 
-//Facebook
-meta[content="http://www.bookrepublic.it#{current_page.data.page_cover_image}" property="og:image"]
-meta[content="Bookrepublic live: i libri dal vivo" property="og:site_name"]
-meta[content="1292377305" property="fb:admins"]
-meta[content="1707792040" property="fb:admins"]
-meta[content="it_IT" property="og:locale"]
-meta[name="#{current_page.data.page_name}" content="#{current_page.data.page_description}"]
-meta[content="Bookrepublic" property="fb:profile_id"]
-meta[content="article" property="og:type"]
-meta[content="http://www.bookrepublic.it#{current_page.url}" property="og:url"]
-meta[content="#{current_page.data.page_title}" property="og:title"]
-meta[content="#{current_page.data.page_description}" property="og:description"]
-meta[content="Book" property="article:section"]
+  /////
+  //Post
+  /////
 
-//Twitter
-meta[content="summary_large_images" name="twitter:card"]
-meta[content="@Bookrep" name="twitter:site"]
-meta[content="@Bookrep" name="twitter:creator"]
-meta[content="#{current_page.data.page_name}" name="twitter:title"]
-meta[content="#{current_page.data.page_description}" name="twitter:description"]
-meta[content="http://www.bookrepublic.it#{current_page.data.cover_image}" name="twitter:image:src"]
+  //Facebook
+  meta[content="http://live.bookrepublic.it#{current_page.data.page_cover_image}" property="og:image"]
+  meta[content="Bookrepublic live: i libri dal vivo" property="og:site_name"]
+  meta[content="1292377305" property="fb:admins"]
+  meta[content="1707792040" property="fb:admins"]
+  meta[content="it_IT" property="og:locale"]
+  - if current_article.data.excerpt
+    meta[name="#{current_article.title}" content="#{current_article.data.excerpt}"]
+  - else
+    meta[name="#{current_article.title}" content="#{escape_html(current_article.summary)}"]
+  meta[content="Bookrepublic" property="fb:profile_id"]
+  meta[content="article" property="og:type"]
+  meta[content="http://live.bookrepublic.it#{current_page.url}" property="og:url"]
+  meta[content="#{current_page.data.page_title}" property="og:title"]
+  meta[content="#{current_page.data.page_description}" property="og:description"]
+  meta[content="Book" property="article:section"]
+
+  //Twitter
+  meta[content="summary_large_images" name="twitter:card"]
+  meta[content="@Bookrep" name="twitter:site"]
+  meta[content="@Bookrep" name="twitter:creator"]
+  meta[content="#{current_page.data.page_name}" name="twitter:title"]
+  meta[content="#{current_page.data.page_description}" name="twitter:description"]
+  meta[content="http://live.bookrepublic.it#{current_page.data.cover_image}" name="twitter:image:src"]
+
+- else
+
+  /////
+  //Pagina progetto
+  /////
+
+  //Facebook
+  meta[content="http://live.bookrepublic.it#{current_page.data.page_cover_image}" property="og:image"]
+  meta[content="Bookrepublic live: i libri dal vivo" property="og:site_name"]
+  meta[content="1292377305" property="fb:admins"]
+  meta[content="1707792040" property="fb:admins"]
+  meta[content="it_IT" property="og:locale"]
+  meta[name="#{current_page.data.page_name}" content="#{current_page.data.page_description}"]
+  meta[content="Bookrepublic" property="fb:profile_id"]
+  meta[content="article" property="og:type"]
+  meta[content="http://live.bookrepublic.it#{current_page.url}" property="og:url"]
+  meta[content="#{current_page.data.page_title}" property="og:title"]
+  meta[content="#{current_page.data.page_description}" property="og:description"]
+  meta[content="Book" property="article:section"]
+
+  //Twitter
+  meta[content="summary_large_images" name="twitter:card"]
+  meta[content="@Bookrep" name="twitter:site"]
+  meta[content="@Bookrep" name="twitter:creator"]
+  meta[content="#{current_page.data.page_name}" name="twitter:title"]
+  meta[content="#{current_page.data.page_description}" name="twitter:description"]
+  meta[content="http://live.bookrepublic.it#{current_page.data.cover_image}" name="twitter:image:src"]

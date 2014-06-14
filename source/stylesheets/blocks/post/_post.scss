@@ -61,6 +61,26 @@ article {
     }
   }
 
+  .article__social {
+    display: block;
+    @include margin(1.5em 0em 1.5em 0em);
+    @include transition (all 0.2s ease-in-out);
+
+    ul {
+      li {
+        display: inline-block;
+        padding-right: 1em;
+
+        a {
+          color: $asphalt;
+        }
+        a:hover {
+          color: $light-gray;
+        }
+      }
+    }
+  }
+
   .article__ebook_box {
     display: block;
     width: 100%;
@@ -283,9 +303,25 @@ article {
     }
 
     .author__content--detail {
-      font-size: .8em;
+      font-size: .6em;
       color: $comment-detail-color;
-      display: inline-block;
+      display: block;
+      @include transition (all 0.2s ease-in-out);
+
+      ul {
+
+        li {
+          display: inline-block;
+          padding-right: 0.5em;
+
+          a {
+            color: $dark-gray;
+          }
+          a:hover {
+            color: $light-gray;
+          }
+        }
+      }
     }
   }
 }
