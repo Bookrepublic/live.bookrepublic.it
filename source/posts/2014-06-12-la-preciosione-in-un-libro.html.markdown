@@ -1,7 +1,7 @@
 ---
 title: 'La precisione, in un libro'
-date: 2012-06-16
-tags: Grande romanzo americano
+date: 2014-06-12
+tags: 'Grande romanzo americano'
 author: 'Daria Bernardoni'
 excerpt: 'Vonnegut è che è quel tipo di scrittore che ti fa entrare in un libro e dopo le prime tre pagine capisci che a questo punto sei davanti a un milione e mezzo di possibili modi per andare avanti.'
 page_cover_image: '/images/post/vonnegut-cover.jpg'
