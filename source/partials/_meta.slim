@@ -17,8 +17,11 @@
   meta[content="Bookrepublic" property="fb:profile_id"]
   meta[content="article" property="og:type"]
   meta[content="http://live.bookrepublic.it#{current_page.url}" property="og:url"]
-  meta[content="#{current_page.data.page_title}" property="og:title"]
-  meta[content="#{current_page.data.page_description}" property="og:description"]
+  meta[content="#{current_article.title}" property="og:title"]
+  - if current_article.data.excerpt
+    meta[content="#{current_article.data.excerpt}" property="og:description"]
+  - else
+    meta[name="#{escape_html(current_article.summary)}" property="og:description"]
   meta[content="Book" property="article:section"]
 
   //Twitter
