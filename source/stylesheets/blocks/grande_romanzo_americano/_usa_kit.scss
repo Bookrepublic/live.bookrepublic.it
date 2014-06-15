@@ -123,12 +123,12 @@
 
 .usa_kit__copy {
   display: block;
-  left: 50%;
   margin: auto;
   z-index: 100;
   @include padding(3em 0em 0em 0em);
   text-align: center;
   color: $base-body-color;
+  max-width: 41em;
 
   h2 {
     font-family: $sans-serif;
