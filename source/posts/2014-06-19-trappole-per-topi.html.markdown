@@ -1,6 +1,6 @@
 ---
 title: 'La precisione, in un libro'
-date: 2014-06-15
+date: 2014-06-19
 tags: 'Grande romanzo americano'
 author: 'Daria Bernardoni'
 excerpt: 'I racconti di Vonnegut? Trappole per topi.'
