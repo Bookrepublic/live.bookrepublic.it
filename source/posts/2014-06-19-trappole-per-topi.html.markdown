@@ -27,6 +27,8 @@ I suoi personaggi sono vividi, riconoscibili, capaci di suscitare empatia. Ricer
   </div>
 </div>
 
-Ricordati di votare il tuo autore preferito, basta un clicl:
+Ricordati di votare il tuo autore preferito, basta un click:
 
 <iframe seamless="seamless" style="border: none; overflow: hidden;" height="450" width="100%" scrolling="no" src="http://assets-polarb-com.a.ssl.fastly.net/api/v4/publishers/filodaria/embedded_polls/iframe?poll_id=185460"></iframe>
+
+Faremo un brindisi all'autore pià premiato il 3 luglio da Open a Milano. Vieni anche tu!
