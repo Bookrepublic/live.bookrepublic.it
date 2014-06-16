@@ -1,0 +1,16 @@
+.usa_polarb__container {
+  @include outer-container;
+  @include padding(0em 1em 5em 1em);
+
+  .usa_polarb__column {
+    @include span-columns(6);
+
+    @include media($ipad) {
+      @include span-columns(12);
+    }
+
+    .usa_polarb__colum__copy {
+      text-align: center;
+    }
+  }
+}
