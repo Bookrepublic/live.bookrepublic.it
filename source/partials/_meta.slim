@@ -30,9 +30,9 @@
   meta[content="@Bookrep" name="twitter:creator"]
   meta[content="#{current_article.title}" name="twitter:title"]
   - if current_article.data.excerpt
-    meta[content="#{current_article.title}" name="twitter:description"]
+    meta[content="#{current_article.data.excerpt}" name="twitter:description"]
   - else
-    meta[content="#{current_article.title}" name="twitter:description"]
+    meta[content="#{escape_html(current_article.summary)}" name="twitter:description"]
   meta[content="http://live.bookrepublic.it#{current_page.data.cover_image}" name="twitter:image:src"]
 
 - else
