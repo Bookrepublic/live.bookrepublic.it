@@ -5,8 +5,9 @@ tags: 'Grande romanzo americano'
 author: 'Daria Bernardoni'
 excerpt: 'Chi sa resistere a racconti perfettamente congegnati che hanno il respiro della grande letteratura?'
 page_cover_image: '/images/post/kv_cover.jpg'
+published: false
 ---
-Abbiamo già parlato di quanto la produzione di Vonnegut sia variegata. Bene, il Vonnegut di <em>Baci da 100 dollari</em> è un costruttore di trappole per topi. 
+Abbiamo già parlato di quanto la produzione di Vonnegut sia variegata. Bene, il Vonnegut di <em>Baci da 100 dollari</em> è un costruttore di trappole per topi.
 
 I suoi personaggi sono vividi, riconoscibili, capaci di suscitare empatia. Ricercano l'idea anni Cinquanta del successo: soldi facili. Ma il loro agire, i loro movimenti, sono determinati dal fabbricante della trappola, che come un burattinaio tira le fila dei loro destini. Chi sa resistere a racconti perfettamente congegnati che hanno il respiro della grande letteratura? Alla fine, chi resta veramente in trappola è il lettore.
 
