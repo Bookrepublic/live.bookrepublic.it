@@ -37,7 +37,7 @@
     padding-right: $blog-usa-gutter;
     padding-left: $blog-usa-gutter;
     margin-right: $blog-usa-gutter;
-    @include transition (all 0.4s ease-in-out);
+    @include transition (all 0.2s ease-in-out);
 
     &:hover {
       opacity: 0.7;
