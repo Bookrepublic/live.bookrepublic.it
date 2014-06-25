@@ -17,3 +17,12 @@
   facebook:
   google:
   quote: 'Libri, bit e massimi sistemi.'
+- display_name: 'Viola Marconi'
+  name: Viola
+  cognome: Marconi
+  photo: '/images/blog_authors/viola_marconi.jpg'
+  web: 
+  twitter: 'LaPesteVirus'
+  facebook:
+  google:
+  quote: 'Descrizione'
