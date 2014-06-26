@@ -36,11 +36,15 @@
                 = author.quote
               .author__content--detail
                 ul
-                  li
-                    a.fa.fa-facebook.fa-2x href="#{author.facebook}"
-                  li
-                    a.fa.fa-twitter.fa-2x href="#{author.twitter}"
-                  li
-                    a.fa.fa-google-plus.fa-2x href="#{author.google}"
-                  li
-                    a.fa.fa-linkedin.fa-2x href="#{author.linkedin}"
+                  - if author.facebook
+                    li
+                      a.fa.fa-facebook.fa-2x href="#{author.facebook}"
+                  - if author.twitter
+                    li
+                      a.fa.fa-twitter.fa-2x href="#{author.twitter}"
+                  - if author.google
+                    li
+                      a.fa.fa-google-plus.fa-2x href="#{author.google}"
+                  - if author.linkedin
+                    li
+                      a.fa.fa-linkedin.fa-2x href="#{author.linkedin}"
