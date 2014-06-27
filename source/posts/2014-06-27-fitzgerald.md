@@ -4,7 +4,7 @@ date: 2014-06-27
 tags: 'Grande romanzo americano'
 author: 'Daria Bernardoni'
 excerpt: "Non sono mai riuscito a perdonare ai ricchi il fatto d’essere ricchi, rabbuiando così la mia vita e tutte le mie opere. (Frances Scott Fitzgerald)"
-page_cover_image: '/images/post/fitzgerald.jpg'
+page_cover_image: '/images/post/fitzgerlad.jpg'
 ---
 > Una persona sentimentale pensa che le cose dureranno, una persona romantica spera disperatamente che non durino.
 
