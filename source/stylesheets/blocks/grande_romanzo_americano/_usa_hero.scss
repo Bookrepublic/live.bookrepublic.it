@@ -17,7 +17,7 @@ $iphone: new-breakpoint(max-width 480px 4);
   background-position: top;
   background-size: cover;
 
-  padding-top: 30em;
+  padding-top: 21em;
   color: $base-body-color;
 
   @include media($ipad) {
@@ -25,7 +25,7 @@ $iphone: new-breakpoint(max-width 480px 4);
   }
 
   @include media($iphone) {
-    padding-top: 25em;
+    padding-top: 10em;
   }
 
   .usa_hero__copy {
