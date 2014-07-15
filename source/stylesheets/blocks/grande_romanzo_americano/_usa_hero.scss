@@ -17,20 +17,20 @@ $iphone: new-breakpoint(max-width 480px 4);
   background-position: top;
   background-size: cover;
 
-  padding-top: 21em;
+  padding-top: 10em;
   color: $base-body-color;
 
   @include media($ipad) {
-    padding-top: 19em;
+    /*padding-top: 19em;*/
   }
 
   @include media($iphone) {
-    padding-top: 10em;
+    padding-top: 21em;
   }
 
   .usa_hero__copy {
     position: absolute;
-    bottom: -10%;
+    bottom: 10%;
     left: 50%;
     margin: auto;
     z-index: 200;
@@ -42,7 +42,7 @@ $iphone: new-breakpoint(max-width 480px 4);
     }
 
     @include media($iphone) {
-      bottom: -43%;
+      bottom: 0%;
     }
 
     @include transform(translate(-50%, -50%));
@@ -68,7 +68,7 @@ $iphone: new-breakpoint(max-width 480px 4);
     }
 
     @include media($iphone) {
-      @include transform(translate(0, -40%));
+      @include transform(translate(0, 0));
     }
 
     .usa_hero__container__item {

@@ -4,7 +4,7 @@
       | Blog
 
   .blog-usa__wrapper
-  - blog.articles[0...3].each do |article|
+  - blog.articles[0...15].each do |article|
     - if article.tags.include? "Grande romanzo americano"
       .blog-usa
         = link_to article do

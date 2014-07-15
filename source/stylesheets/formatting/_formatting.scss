@@ -6,6 +6,10 @@
   @include padding(0em 0em 5em 0em);
 }
 
+.f-layout-padding--only-top {
+  padding-bottom: 0em !important;
+}
+
 .f-layout-padding--only-bottom--1x {
   @include padding(0em 0em 1em 0em);
 }
