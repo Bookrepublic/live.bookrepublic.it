@@ -9,6 +9,12 @@ $iphone: new-breakpoint(max-width 480px 4);
 
   .usa_playoff {
 
+    li.usa_playoff__li--finals {
+      position: relative;
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
     @include media($medium-screen) {
       li.usa_playoff__li {
         position: relative;
@@ -49,6 +55,17 @@ $iphone: new-breakpoint(max-width 480px 4);
         overflow: hidden;
         max-height: 180px;
 
+        img {
+          width: 100%;
+          @include transition (all 0.2s ease-in-out);
+          background: $card-image-background;
+        }
+      }
+      
+      .usa_playoff__cards--card-image--big {
+        @extend usa_playoff__cards--card-image;
+        max-height: 318px;
+      
         img {
           width: 100%;
           @include transition (all 0.2s ease-in-out);

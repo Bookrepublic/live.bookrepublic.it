@@ -64,7 +64,7 @@ $iphone: new-breakpoint(max-width 480px 4);
     @include transform(translate(0, -10%));
 
     @include media($ipad) {
-      @include transform(translate(0, -30%));
+      @include transform(translate(0, -5%));
     }
 
     @include media($iphone) {
